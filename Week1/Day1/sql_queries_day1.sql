@@ -50,32 +50,55 @@ INSERT INTO Project (project_id, name, department_id) VALUES
 (6, 'Project Zeta', 4),
 (7, 'Project Eta', 3);
 
--- Problem 1: Basic Employee Queries
-
--- Scenario:
--- Retrieve employee and department information
--- using basic SQL SELECT statements.
+-- Problem 1: Basic Queries
 
 -- Query 1: Select all columns from Employee table
 SELECT *
 FROM Employee;
 
--- Query 2: Select only name and salary columns
+-- Q2: Select only name and salary columns
 SELECT name, salary
 FROM Employee;
 
--- Query 3: Select employees older than 30
+-- Q3: Select employees older than 30
 SELECT *
 FROM Employee
 WHERE age > 30;
             
--- Query 4: Select names of all departments
+-- Q4: Select names of all departments
 SELECT name
 FROM Department;
 
--- Query 5: Select employees who work in IT department
+-- Q5: Select employees who work in IT department
 SELECT e.*
 FROM Employee e
 JOIN Department d
 ON e.department_id = d.department_id
 WHERE d.name = 'IT';
+
+-- Problem 2: String Matching Queries
+
+-- Q6.Select employees whose names start with 'J'
+SELECT *
+FROM Employee
+WHERE name LIKE 'J%';
+
+-- Q7.Select employees whose names end with 'e'
+SELECT *
+FROM Employee
+WHERE name LIKE '%e';
+
+-- Q8.Select employees whose names contain 'a'
+SELECT *
+FROM Employee
+WHERE name LIKE '%a%';
+
+-- Q9.Select employees whose names are exactly 9 characters long
+SELECT *
+FROM Employee
+WHERE name LIKE '_________';
+
+-- Q10.Select employees whose names have 'o' as the second character
+SELECT *
+FROM Employee
+WHERE name LIKE '_o%';
