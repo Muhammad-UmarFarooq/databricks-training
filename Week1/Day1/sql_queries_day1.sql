@@ -128,4 +128,4 @@ WHERE hire_date >= '2021-03-01';
 -- Q15.Select employees hired in the last 2 years
 SELECT *
 FROM Employee
-WHERE hire_date >= CURRENT_DATE - INTERVAL 2 YEARS;
+WHERE hire_date >= CURRENT_DATE - INTERVAL 2 YEAR;
