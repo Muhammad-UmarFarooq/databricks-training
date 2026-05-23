@@ -49,3 +49,51 @@ INSERT INTO Project (project_id, name, department_id) VALUES
 (5, 'Project Epsilon', 4),
 (6, 'Project Zeta', 4),
 (7, 'Project Eta', 3);
+
+-------
+-- =========================================
+-- Problem 1: Basic Employee Queries
+-- =========================================
+
+-- Scenario:
+-- Retrieve employee and department information
+-- using basic SQL SELECT statements.
+
+-- =========================================
+-- Query 1: Select all columns from Employee table
+-- =========================================
+
+SELECT *
+FROM Employee;
+
+-- =========================================
+-- Query 2: Select only name and salary columns
+-- =========================================
+
+SELECT name, salary
+FROM Employee;
+
+-- =========================================
+-- Query 3: Select employees older than 30
+-- =========================================
+
+SELECT *
+FROM Employee
+WHERE age > 30;
+
+-- =========================================
+-- Query 4: Select names of all departments
+-- =========================================
+
+SELECT name
+FROM Department;
+
+-- =========================================
+-- Query 5: Select employees who work in IT department
+-- =========================================
+
+SELECT e.*
+FROM Employee e
+JOIN Department d
+ON e.department_id = d.department_id
+WHERE d.name = 'IT';
