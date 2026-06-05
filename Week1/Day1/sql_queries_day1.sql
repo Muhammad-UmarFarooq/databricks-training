@@ -240,3 +240,36 @@ SELECT department_id, SUM(salary) AS total_salary
 FROM Employee
 GROUP BY department_id
 ORDER BY total_salary DESC;
+
+-- Problem 8: Join Queries
+
+-- Q36.Select employee names along with their department names
+SELECT e.name AS employee_name, d.name AS department_name
+FROM Employee e
+JOIN Department d
+ON e.department_id = d.department_id;
+
+-- Q37.Select project names along with the department names they belong to
+SELECT p.name AS project_name, d.name AS department_name
+FROM Project p
+JOIN Department d
+ON p.department_id = d.department_id;
+
+-- Q38.Select employee names and their corresponding project names
+SELECT e.name AS employee_name, p.name AS project_name
+FROM Employee e
+JOIN Project p
+ON e.department_id = p.department_id;
+
+-- Q39.Select all employees and their departments, including those without a department
+SELECT e.name AS employee_name, d.name AS department_name
+FROM Employee e
+LEFT JOIN Department d
+ON e.department_id = d.department_id;
+
+-- Q40.Select all departments and their employees, including departments without employees
+SELECT d.name AS department_name, e.name AS employee_name
+FROM Department d
+LEFT JOIN Employee e
+ON d.department_id = e.department_id;
+
