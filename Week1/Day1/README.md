@@ -11,7 +11,7 @@ This folder contains my Day 1 SQL practice completed as part of the Databricks T
 | `create_tables.sql` | SQL script to create Department, Employee, and Project tables |
 | `insert_data.sql` | SQL script to insert sample data into the tables |
 | `queries.sql` | SQL practice queries (Q1–Q35) |
-| `screenshots/` | Output screenshots of executed queries (if available) |
+| `output.docx` | Output screenshots of executed queries |
 
 ## Topics Covered
 
