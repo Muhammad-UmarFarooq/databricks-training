@@ -124,6 +124,8 @@ SELECT department_id, MAX(salary) AS highest_salary
 FROM Employee
 GROUP BY department_id;
 
+-- Problem 6: Having Queries
+
 -- Q25.Select the department with the highest average salary
 SELECT department_id, AVG(salary) AS average_salary
 FROM Employee
